@@ -1,29 +1,39 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" ><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en" ><!--<![endif]-->
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="mySociety Developer Information : Building Better Code" />
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>mySociety Developer Information - {{ page.title }}</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+  
+  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/style.css">
+  
+  <script src="{{ site.baseurl }}assets/js/vendor/custom.modernizr.js"></script>
 
-    <title>mySociety Developer Information</title>
-  </head>
+</head>
+<body>
 
-  <body>
+<div class="contain-to-grid">
+<nav class="top-bar">
+  <ul class="title-area">
+    <!-- Title Area -->
+    <li class="name">
+      <h1><a href="{{ site.baseurl }}">mySociety Developer Information</a></h1>
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/mysociety">View on GitHub</a>
+  <section class="top-bar-section">
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li class="divider"></li>
+      <li class="active"><a href="{{ site.baseurl }}coding-standards.html">Coding Standards</a></li>
+      <li class="divider"></li>
+    </ul>
 
-          <h1 id="project_title">mySociety Developer Information</h1>
-          <h2 id="project_tagline">Building Better Code</h2>
-
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+  </section>
+</nav>
+</div>
