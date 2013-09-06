@@ -1,3 +1,15 @@
+# Licences
+
+Copyright (c) 2013 mySociety, http://www.mysociety.org
+
+This work is licensed under the Creative Commons
+Attribution-ShareAlike 3.0 Unported License.
+
+To view a copy of this license, visit
+http://creativecommons.org/licenses/by-sa/3.0/.
+
+## Foundation Framework
+
 Copyright (c) 2011 ZURB, http://www.zurb.com/
 
 Permission is hereby granted, free of charge, to any person obtaining
