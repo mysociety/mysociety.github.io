@@ -9,7 +9,7 @@ title: Coding Standards
 
 * Choose the best technology stack for the combination of the needs of the project and our knowledge/sysadmin/support capabilities - if you're going for something new, we as a team will need to ensure we can deploy it, back it up etc by the time it goes live. Be proactive in starting comunication/planning around this early and be prepared to muck in.
 * e.g. Database choice
-* Progressive enhancement is the Right Thing to do. See e.g. http://jakearchibald.com/2013/progressive-enhancement-still-important/
+* Progressive enhancement is the Right Thing to do. See e.g. [this article](http://jakearchibald.com/2013/progressive-enhancement-still-important/)
 * URLs
 
 ### Coding
@@ -64,12 +64,12 @@ title: Coding Standards
 ### Browser testing
 
 * Many of our users are in government, or well outside the normal tech-savvy world we inhabit. They will have older browsers, and less knowledge of using computers. Our sites should still work in IE6, though of course functionality may differ, we are in no way a "pixel-perfect" house.
-* You can get VMs of IE6-11 from http://www.modern.ie/en-US/virtualization-tools#downloads. On Linux/OS X a tool called [ievms](https://github.com/xdissent/ievms) automates the installation process - see [these instructions](https://github.com/xdissent/ievms#installation). Or Robin has a browserstack account for quick testing.
+* You can get VMs of IE6-11 from [modern.ie](http://www.modern.ie/en-US/virtualization-tools#downloads). On Linux/OS X a tool called [ievms](https://github.com/xdissent/ievms) automates the installation process - see [these instructions](https://github.com/xdissent/ievms#installation). Or Robin has a browserstack account for quick testing.
 * For info, IE7 was the oldest version to support position:fixed and min/max-width; IE8 was the oldest to support display:table and box-sizing:border-box; IE9 was the oldest to support media queries.
 * Media queries - Various approaches possible. If going with a mobile-first approach (probably wise), FixMyStreet puts all the "desktop" type styles in a separate stylesheet and includes that both with a media query and with an IE conditional comment. Or you could use Respond.js if your IE usage is considered low enough (it can have an effect on IE browsing).
 * Using new features - you are encouraged to use modern features that make CSS development easier, but not at the expense of old IE going horribly wrong (see first bullet point). So if you use display:table, or box-sizing, and these cause a large adverse effect, you must have workarounds. You may find [caniuse.com](http://caniuse.com/) helpful in determining what is safe to use.
 
 ### Helpful tools
 
-* Django-based: we have a django-jumpstart repository - https://github.com/mysociety/django-jumpstart to start the setup of a Django project.
+* Django-based: we have a [django-jumpstart repository](https://github.com/mysociety/django-jumpstart) to start the setup of a Django project.
 * Django-based: DjDT (Django Debug Toolbar) is very useful for local development.
