@@ -98,6 +98,63 @@ title: Coding Standards
   linked together and documented automatically as much as possible. Basically,
   if you go on holiday for a year, it would be good if we can look at your
   tickets and see what you were working on and where you got to.
+* Although there are some differences between projects, our standard
+  workflow is that code that is merged into the deployable branch
+  (typically `master`) should have been reviewed and approved by
+  another developer before that merge happens, although you
+  should use common sense to decide when a pull request and
+  review is needed.  For more details on code reviews, see the
+  next section.
+
+### Code reviews
+
+For any project you're working on, you should know which other other
+developers are expected to be able do code reviews for you.  If it's
+not clear to you who those people are, please establish that by email.
+When you make a pull request, it's a good idea to also explicitly ask
+in IRC for one of those possible reviewers to look at it, since it's
+easy to miss GitHub notifications given their volume.  As the reviewer
+of a pull request, here is some guidance for what to do:
+
+* Look at it as soon as you can, or let the author know when you can
+  deal with it.  The shorter the feedback loop here the better: it's
+  essentially the "fail fast" principle.
+* Start by thinking about the intent of the pull request and the big
+  picture before looking at the details of the implementation.
+  Although pointing out typos or non-idiomatic language uses is
+  helpful, and certainly part of the review process, it's not worth
+  the author dealing with those if they're in sections of code
+  that shouldn't even be there, for example.
+* Anything that you'd like the author to fix, or take action on,
+  should be left in a GitHub comment on the pull request rather
+  than just mentioned to them in IRC.  (Of course, it's often
+  helpful to check things with the author in IRC, but please
+  bear in mind that if something wasn't clear to you, it might
+  well be the case that the code should be clearer, have some
+  comments added, or that the commit messages should be better.)
+* As the reviewer, it's **not** your responsibility to make the
+  changes - you shouldn't just add extra commits to the pull request,
+  for example.  It's the original author's work and you are just
+  suggesting changes that they should make, not do it for them.
+* Remember to check that the pull request includes tests that cover
+  any new code and would detect regressions.
+* Leave a comment when you've finished the review - a simple
+  `:+1:` is sufficient if there are no problems.  The original
+  author can then go ahead to merge and push.  (Note that while
+  in other organisations it's common for the reviewer to merge
+  and deploy if they're happy with the code, our convention is
+  that the author deals with this after getting a thumbs-up,
+  since they are likely to be in a better position to deal with
+  any conflicts on merging or problems on deploying.)
+* Please be constructive and kind in your feedback.
+
+(For more advice about doing good code reviews, [this article may be
+useful](http://alexgaynor.net/2013/sep/26/effective-code-review/).)
+
+If no one who can do a review of your pull request is around, you need
+to assess whether it's so urgent that you need to merge it
+regardless.  If you're not clear about this do ask about it by
+email or IRC.
 
 ### Documentation and maintainability
 
