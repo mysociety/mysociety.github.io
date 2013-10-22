@@ -22,7 +22,7 @@ title: Coding Standards
 #### Indentation and whitespace
 
 * If the language you're using has a clear convention (e.g. ruby 2 space
-  indents), follow that. Otherwise, indents are spaces, in steps of 4. 
+  indents), follow that. Otherwise, indents are spaces, in steps of 4.
 * In nice templates (e.g. Catalyst, Django, etc), try indenting HTML 4, but IF
   statements and the like 2 (ie. inbetween the HTML indents). This can be quite
   a clear way to indent loops and conditional blocks, and yet keep it visually
