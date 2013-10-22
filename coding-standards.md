@@ -52,6 +52,7 @@ title: Coding Standards
 
 * When committing, please commit individual changes in separate commits (not one "Fixes this and this and this and this" commit), unless for some reason that is impossible to do. In any case, please describe the change the commit makes as clearly as possible - you are documenting this change for anyone ever working on the project ever in the future, so please avoid "Update style" or "Improve flow".
 * Ticketing - if you find a bug, ticket it. If you think of a feature request, ticket it. If you're asked to implement something and it isn't already ticketed, tell the person off who told you to do it, and ticket it. If you are working on something and have an update for others working on the project, leave an update on the ticket if appropriate. Refer to ticket numbers in commits, and basically do everything to ensure that things are linked together and documented automatically as much as possible. Basically, if you go on holiday for a year, it would be good if we can look at your tickets and see what you were working on and where you got to.
+* Assign a ticket to yourself when you don't want anyone else to work on it - eg you've either started working on it or for some reason are best suited to working on it. Don't use assigning tickets as a way to queue up future work. This allows people looking for tickets to do to quickly scan for ones that are available.
 
 ### Documentation and maintainability
 
