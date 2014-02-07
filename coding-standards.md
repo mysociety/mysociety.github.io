@@ -106,6 +106,41 @@ title: Coding Standards
   review is needed.  For more details on code reviews, see the
   next section.
 
+### Commit messages
+
+Good commit messages are very important for making our
+repositories easy to work in.  Commit messages like "fix bug",
+or "More changes" are of no use to anyone.  git makes it easy to
+search for when a change was introduced, and good commit
+messages provide invaluable context for that change to a
+developer who might need to know about the code many years
+after it was written.
+
+A good commit message should explain *why* the change it
+introduces was needed, and (particularly if the implementation
+is non-obvious) a explanation of *what* was done.
+
+Although it's helpful to reference GitHub issues in a commit
+message (e.g. "Fixes #1234" so that the issue is closed
+automatically) you shouldn't assume that the person reading the
+commit message has access to that issue since it isn't in the
+repository (and we might move to another bug tracker in the
+future).  The commit message should still concisely explain the
+bug that's being fixed.
+
+In terms of formatting of the commit message it should have the
+following structure:
+
+    A summary of the change introduced in the commit, under 72 characters
+    
+    After a blank line, a fuller description of why the change
+    was introduced, any necessary background, and a summary of
+    the change made for more complex issues.  This summary
+    should be hard-wrapped at under 72 characters.
+    
+    If in doubt, more discussion and context rather than less is
+    preferred.
+
 ### Code reviews
 
 For any project you're working on, you should know which other other
