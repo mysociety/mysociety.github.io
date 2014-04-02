@@ -181,6 +181,44 @@ for IE7 (and IE6 if all hope has foresaken you), as currently it is just IE <
 SMACSS, OO-CSS and BEM style CSS syntax can all be good, use whichever you
 think suits the project and stick to it.
 
+#### Responsible selectors
+
+Regardless of which syntax you choose, there's a few things you should do to keep your CSS friendly. This is relevant when writing CSS for products that will be themed or co-branded.
+
+##### Selectors should always be the lowest possible specificity
+Favour using descriptive, verbose CSS classes instead of nested or over-qualified selectors, for example:
+
+This is bad. With each nested selector the specificity gets higher and is difficult to override:
+{% highlight sass %}
+.footer {
+  .list {
+    .list-item {
+      // some rule
+    }
+  }
+}
+{% endhighlight %}
+
+This is better. The specificity of all of these rules are the same, and are easy to override:
+{% highlight sass %}
+.footer {}
+.footer__list {}
+.footer__list__list-item {}
+{% endhighlight %}
+
+##### Avoid using IDs as selectors
+Unless you *really* have to. IDs have very high specificity and are troublesome to override.
+
+##### Don't hook javascript and styles to the same classes
+Use a js- prefix, for example ```class="js-menu menu"```
+
+##### Don't qualify rules with the tag name
+This ties your styles to the DOM, which may change, and adds more specificity than needed
+
+This is bad ```header.site-header {}```
+
+This is better ```.site-header {}```
+
 ### Frameworks
 
 Notes on specific frameworks and what they're good for.
