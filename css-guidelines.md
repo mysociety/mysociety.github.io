@@ -225,6 +225,8 @@ Notes on specific frameworks and what they're good for.
 
 #### [Foundation](http://foundation.zurb.com)
 
+**Foundation 4 and up does not support IE < 9. Use with caution.**
+
 The Foundation framework provides a good basic grid, which is true mobile-first
 (ie the design renders cleanly on mobile unless you apply classes telling it to
 behave otherwise). It has good support for varying screen sizes, and a
