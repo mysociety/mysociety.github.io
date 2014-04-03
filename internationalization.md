@@ -3,7 +3,7 @@ layout: page
 title: Internationalization
 ---
 -   [Introduction](#introduction)
--   [General Guidelines](#general_guidelines)
+-   [General Guidelines](#general-guidelines)
 -   [Examples](#examples)
 -   [Checklist](#checklist)
 
