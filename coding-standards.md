@@ -239,6 +239,27 @@ email or IRC.
   [caniuse.com](http://caniuse.com/) helpful in determining what is safe to
   use.
 
+### Language-based dependency managers
+
+If your vhost wishes to use python packages from PyPi, ruby gems, or whatever,
+please do not use a language specific way of installing something globally
+(e.g. sudo gem install) as there is no record of what has been installed and
+will cause issues when it comes to deployment. There are the following options:
+
+* Install a Debian package for that code, and use that in your code (e.g. if
+  you're happy with the Debian version of django, or sass) - a python
+  virtualenv will need to have access to system site packages (see e.g. sayit's
+  set up script for version-independent way of doing that);
+* For python, use virtualenv to install packages locally for that vhost, and
+  list them in a requirements.txt file;
+* For ruby, if it's a whole app you probably want to investigate e.g. bundler.
+  If you just need a gem for e.g. CSS compilation, then you should alter/setup
+  your GEM_HOME to somewhere within your vhost to install the gems, add it to
+  GEM_PATH, and add the bin directory to PATH. (You could theoretically use gem
+  install --user-install, but this could lead to confusion as a developer if
+  you have multiple developer sites on one server and need to keep version
+  separation).
+
 ### Helpful tools
 
 * Django-based: we have a [django-jumpstart
