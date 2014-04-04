@@ -5,7 +5,7 @@ title: Coding Standards
 
 *Readability is more important than cleverness.*
 
-### Project design/ technology choices
+## Project design/ technology choices
 
 * Choose the best technology stack for the combination of the needs of the
   project and our knowledge/sysadmin/support capabilities - if you're going for
@@ -17,9 +17,9 @@ title: Coding Standards
   article](http://jakearchibald.com/2013/progressive-enhancement-still-important/)
 * URLs
 
-### Coding
+## Coding
 
-#### Indentation and whitespace
+### Indentation and whitespace
 
 * If the language you're using has a clear convention (e.g. ruby 2 space
   indents), follow that. Otherwise, indents are spaces, in steps of 4.
@@ -39,7 +39,7 @@ title: Coding Standards
   recommended, but allowable.
 * Try not to let line lengths exceed 80 characters.
 
-#### Control structures
+### Control structures
 
 * Braces should be on the *same line* as the if/elseif/else/etc. statement they
   are attached to. They should have space aside them, not touching a bracket or
@@ -51,7 +51,7 @@ title: Coding Standards
 * If you have a multi line array definition or similar, put the closing `)` on
   its own line aligned with the start of the definition.
 
-#### Functions and classes
+### Functions and classes
 
 * Be clear what a function is doing, in terms of returning data. Have a default
   return value.
@@ -59,14 +59,14 @@ title: Coding Standards
 * Use underscores or camelCase dependent upon the language's preference, but be
   consistent.
 
-#### Strings and constants
+### Strings and constants
 
 * PHP - use single quotes if you don't need variable interpolation.
 * SQL - put keywords such as `SELECT`, `UPDATE`, etc. in all caps to make them
   easy to find and distinguish.
 * If you have a site wide constant, try and put it in ALLCAPS.
 
-#### Tests
+### Tests
 
 * If fixing a bug, the best practice way to proceed is to write a test that
   fails due to the bug, fix the bug, then make sure the test passes.
@@ -81,7 +81,7 @@ title: Coding Standards
   provide security that changes can be made. For a mature project the ideal is
   to have some unit tests and some functional tests for key scenarios.
 
-### Committing code and working with repositories
+## Committing code and working with repositories
 
 * When committing, please commit individual changes in separate commits (not
   one "Fixes this and this and this and this" commit), unless for some reason
@@ -106,7 +106,7 @@ title: Coding Standards
   review is needed.  For more details on code reviews, see the
   next section.
 
-### Commit messages
+## Commit messages
 
 Good commit messages are very important for making our
 repositories easy to work in.  Commit messages like "fix bug",
@@ -132,16 +132,16 @@ In terms of formatting of the commit message it should have the
 following structure:
 
     A summary of the change introduced in the commit, under 72 characters
-    
+
     After a blank line, a fuller description of why the change
     was introduced, any necessary background, and a summary of
     the change made for more complex issues.  This summary
     should be hard-wrapped at under 72 characters.
-    
+
     If in doubt, more discussion and context rather than less is
     preferred.
 
-### Code reviews
+## Code reviews
 
 For any project you're working on, you should know which other other
 developers are expected to be able do code reviews for you.  If it's
@@ -191,7 +191,7 @@ to assess whether it's so urgent that you need to merge it
 regardless.  If you're not clear about this do ask about it by
 email or IRC.
 
-### Documentation and maintainability
+## Documentation and maintainability
 
 * At a minimum, there should be a list of steps required to install the
   project. As the project matures, and hopefully proves to be useful, consider
@@ -212,7 +212,7 @@ email or IRC.
   settle on where is best. You can document in files in the repository, you can
   use the GitHub wiki, have a GitHub site even.
 
-### Browser testing
+## Browser testing
 
 * Many of our users are in government, or well outside the normal tech-savvy
   world we inhabit. They will have older browsers, and less knowledge of using
@@ -239,7 +239,7 @@ email or IRC.
   [caniuse.com](http://caniuse.com/) helpful in determining what is safe to
   use.
 
-### Language-based dependency managers
+## Language-based dependency managers
 
 If your vhost wishes to use python packages from PyPi, ruby gems, or whatever,
 please do not use a language specific way of installing something globally
@@ -260,7 +260,7 @@ will cause issues when it comes to deployment. There are the following options:
   you have multiple developer sites on one server and need to keep version
   separation).
 
-### Helpful tools
+## Helpful tools
 
 * Django-based: we have a [django-jumpstart
   repository](https://github.com/mysociety/django-jumpstart) to start the setup
