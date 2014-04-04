@@ -219,6 +219,13 @@ This is bad ```header.site-header {}```
 
 This is better ```.site-header {}```
 
+### Recommended reading
+
+  * [About HTML semantics and front-end architecture](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)
+  * [An Introduction To Object Oriented CSS (OOCSS)](http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
+  * [Scalable and Modular Architecture for CSS](http://smacss.com/) - also available in the mySociety book library
+
+
 ## Frameworks
 
 Notes on specific frameworks and what they're good for.
