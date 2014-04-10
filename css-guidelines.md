@@ -8,7 +8,7 @@ to be *The Right Thing* at the moment. Obviously this applies mostly when
 starting brand new projects. When working on an existing project, use whatever
 practices that project uses already, for consistency.
 
-### Assumed
+## Assumed
 
 Things this document assumes you already are trying to achieve with your CSS
 are:
@@ -25,7 +25,7 @@ are:
 Therefore, the following points cover specifics in *how* to achieve those
 goals.
 
-### What do you need?
+## What do you need?
 
 The first actual step is to decide if you need to 'support' IE6 and IE7. What
 is the output of the project, who will be viewing it, will it need full IE6
@@ -35,7 +35,7 @@ That is a project-specific decision to be made based upon user need.
 Secondly, decide whether it needs to be responsive, and if there are any other
 design/content constraints that will affect your CSS.
 
-#### I don't care about IE6/7
+### I don't care about IE6/7
 
 A basic start without a framework (not inventing your own, just not having one)
 is straightforward, especially if you don't mind about IE6/7:
@@ -47,7 +47,7 @@ is straightforward, especially if you don't mind about IE6/7:
    fixed`, widths include their padding/border, and not really many browser bugs
    to worry about. Hooray!
 
-#### I need to care about old IE
+### I need to care about old IE
 
 1. There is a version of normalise.css for old IE, use that.
 2. Use conditional comments, or conditional body classes, to target specific IE
@@ -60,7 +60,7 @@ is straightforward, especially if you don't mind about IE6/7:
    has [issues](https://github.com/Schepp/box-sizing-polyfill/issues/23) when
    you need it most.
 
-#### I need responsive and old IE
+### I need responsive and old IE
 
 * IE < 9 does not support media queries, so can't do responsive design in that
   sense, there are various options.
@@ -70,7 +70,7 @@ is straightforward, especially if you don't mind about IE6/7:
   http://adactio.com/journal/5969/ as again to be considering what you should
   do about old-IE.
 
-### Grid Systems
+## Grid Systems
 
 A grid system is generally a *Good Idea*, but there is not one grid system to
 rule them all. Especially if you are working with a large variation in screen
@@ -140,7 +140,7 @@ That way, you can specify as little or as much grid system as you like or don't
 in your CSS, and have it work at multiple breakpoints without having to clutter
 up or confuse the HTML.
 
-#### Grid Systems and Old IE
+### Grid Systems and Old IE
 
 The above, and most of the available grid systems make use of the box-sizing
 tricks mentioned to make it possible to easily define grids with padding or
@@ -176,16 +176,63 @@ hacks. You'll probably need to expand upon this a bit to get specific versions
 for IE7 (and IE6 if all hope has foresaken you), as currently it is just IE <
 9.
 
-### Syntax
+## Syntax
 
 SMACSS, OO-CSS and BEM style CSS syntax can all be good, use whichever you
 think suits the project and stick to it.
 
-### Frameworks
+### Responsible selectors
+
+Regardless of which syntax you choose, there's a few things you should do to keep your CSS friendly. This is relevant when writing CSS for products that will be themed or co-branded.
+
+#### Selectors should always be the lowest possible specificity
+Favour using descriptive, verbose CSS classes instead of nested or over-qualified selectors, for example:
+
+This is bad. With each nested selector the specificity gets higher and is difficult to override:
+{% highlight sass %}
+.footer {
+  .list {
+    .list-item {
+      // some rule
+    }
+  }
+}
+{% endhighlight %}
+
+This is better. The specificity of all of these rules are the same, and are easy to override:
+{% highlight sass %}
+.footer {}
+.footer__list {}
+.footer__list__list-item {}
+{% endhighlight %}
+
+#### Avoid using IDs as selectors
+Unless you *really* have to. IDs have very high specificity and are troublesome to override.
+
+#### Don't hook javascript and styles to the same classes
+Use a js- prefix, for example ```class="js-menu menu"```
+
+#### Don't qualify rules with the tag name
+This ties your styles to the DOM, which may change, and adds more specificity than needed
+
+This is bad ```header.site-header {}```
+
+This is better ```.site-header {}```
+
+### Recommended reading
+
+  * [About HTML semantics and front-end architecture](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)
+  * [An Introduction To Object Oriented CSS (OOCSS)](http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
+  * [Scalable and Modular Architecture for CSS](http://smacss.com/) - also available in the mySociety book library
+
+
+## Frameworks
 
 Notes on specific frameworks and what they're good for.
 
-#### [Foundation](http://foundation.zurb.com)
+### [Foundation](http://foundation.zurb.com)
+
+**Foundation 4 and up does not support IE < 8, and IE8 will only display mobile styles without some workarounds. Use with caution.**
 
 The Foundation framework provides a good basic grid, which is true mobile-first
 (ie the design renders cleanly on mobile unless you apply classes telling it to
@@ -202,7 +249,7 @@ The [gem](http://foundation.zurb.com/docs/sass.html) will bootstrap a site,
 including static assets and Compass configuration, which might be useful when
 getting started.
 
-#### [Bootstrap](http://getbootstrap.com/)
+### [Bootstrap](http://getbootstrap.com/)
 
 **Bootstrap 3 does not support IE < 8. Use with caution.**
 
@@ -224,7 +271,7 @@ design or whatever, or have some nice effects already written for you; but I'd
 worry about relying on things, rather than picking and using what is actually
 necessary for the project.
 
-### Summary
+## Summary
 
 So in summary:
 

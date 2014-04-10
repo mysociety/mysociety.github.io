@@ -7,7 +7,7 @@ title: Internationalization
 -   [Examples](#examples)
 -   [Checklist](#checklist)
 
-### Introduction
+## Introduction
 
 Marking up text for translation in a way that will actually make it
 possible for people using languages with different grammars to translate
@@ -19,9 +19,9 @@ start marking up application text for translation:
 -   [http://www.gnu.org/software/gettext/manual/html\_node/Preparing-Strings.html](http://www.gnu.org/software/gettext/manual/html_node/Preparing-Strings.html)
 -   [http://www.gnu.org/prep/standards/html\_node/Internationalization.html](http://www.gnu.org/prep/standards/html_node/Internationalization.html)
 
-### General Guidelines
+## General Guidelines
 
-#### Don't concatenate strings to "build" a sentence
+### Don't concatenate strings to "build" a sentence
 
 Different languages put things in different orders in the sentence. A
 trivial example would be `"the " + $colour + " house"` where many
@@ -33,7 +33,7 @@ will need to add something after the number. In all these cases,
 string**, using tokens to insert variables into it, so the translator
 can render it with the variables in any order needed.
 
-#### Don't let identical strings be "grouped" in the translation file, if you can help it
+### Don't let identical strings be "grouped" in the translation file, if you can help it
 
 If a string, say `_("Print")`, is used several times in your code, your
 i18n engine may well group all the uses together in the translation
@@ -45,7 +45,7 @@ considered unique, either by using a unique token in place of each
 translatable string, or by optionally adding something to make
 otherwise-identical strings unique one at a time, as required.
 
-#### Fill your code to bursting with comments that explain CONTEXT of a translatable string
+### Fill your code to bursting with comments that explain CONTEXT of a translatable string
 
 ...pretty much every one of them, even when it appears to be bloody
 obvious to you. No, really. These comments need to be in a format that
@@ -66,7 +66,7 @@ the string appears in; say what the words in it refer to; whether it's a
 label on a button, a clickable link, a title, an instruction to the
 user, or whatever.
 
-#### Consider plurals carefully
+### Consider plurals carefully
 
 Definitely don't hard-code a singular/plural.
 `n=1 ? _("page") : _("pages")` is all wrong. (See "concatenating
@@ -78,7 +78,7 @@ for "2, 3, or 4" or something, and the "plural" only kicks in from 5
 upwards. The i18n framework will handle that, as long as it's invoked
 correctly by the coder.
 
-#### Consider what to leave out of the translation process
+### Consider what to leave out of the translation process
 
 Not *every* string to be displayed necessarily needs including in the
 translation file. If it's part of an admin interface that only appears
@@ -91,9 +91,9 @@ English, and translation was not needed (even though the administrators
 may well be manipulating data in another language). So don't guess:
 check with the project manager if your translation is really necessary.
 
-### Examples
+## Examples
 
-#### "not sent to council"
+### "not sent to council"
 
 How to translate the string *"not sent to council"* into French? I need
 to know *what* hasn't been sent (a message, a report, a letter, some
@@ -116,7 +116,7 @@ might be required, as there will always be some language that needs
 something done differently. In some cases, you just have to wait for
 patches (or just complaints) from individual translators.
 
-#### "(optional)"
+### "(optional)"
 
 As above, the translator needs to know (via a clarifying comment in the
 translation file) *what* is optional — one thing? many things? what?
@@ -137,7 +137,7 @@ translate each case separately, and have a clarifying comment for each
 to explain what is being labelled as "optional" so they can provide the
 correct translation.
 
-### Checklist
+## Checklist
 
 -   If your translation file contains single prepositions as
     translatable strings (e.g. "to", "by", "at", etc.) you've done it
@@ -148,9 +148,9 @@ correct translation.
     what "%s" represents, so add a comment (in the translation file),
     e.g. "%s is a date", or "string appears as ' at 10:00'").
 
-### Working with .po files
+## Working with .po files
 
-#### Manual process, ignoring Transifex
+### Manual process, ignoring Transifex
 
 This can be partly project dependent, but in the general case, things
 work as follows. If you have added new strings to the codebase, you run
