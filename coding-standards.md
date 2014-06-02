@@ -19,6 +19,21 @@ title: Coding Standards
 
 ## Coding
 
+### General style
+
+* Try to be aware of the idioms of the language you're working in, and use them.
+
+#### Python style resources:
+* [PEP8](http://legacy.python.org/dev/peps/pep-0008/)
+* [PEP257](http://legacy.python.org/dev/peps/pep-0257/)
+* [Django Coding Style Guide](https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/coding-style/)
+* [flake8](https://pypi.python.org/pypi/flake8)
+
+#### Ruby style resources:
+* [ruby-style-guide](https://github.com/bbatsov/ruby-style-guide)
+* [rubocop](https://github.com/bbatsov/rubocop)
+* [rails-style-guide](https://github.com/bbatsov/rails-style-guide)
+
 ### Indentation and whitespace
 
 * If the language you're using has a clear convention (e.g. ruby 2 space
