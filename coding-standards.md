@@ -201,6 +201,15 @@ of a pull request, here is some guidance for what to do:
 (For more advice about doing good code reviews, [this article may be
 useful](http://alexgaynor.net/2013/sep/26/effective-code-review/).)
 
+As the coder:
+
+* When making changes to pull requests following initial review, it
+  makes the request easier to re-review if you make changes in
+  subsequent commits rather than rewriting. Otherwise it takes more work
+  for the reviewer to figure out/remember what's changed. The fixup
+  commits can then be squashed or merged into other commits before
+  merging into the main branch.
+
 If no one who can do a review of your pull request is around, you need
 to assess whether it's so urgent that you need to merge it
 regardless.  If you're not clear about this do ask about it by
