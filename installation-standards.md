@@ -24,12 +24,20 @@ based on its ease of installability.
   followed by anybody with reasonable technical and domain knowledge to build a
   working deployment.
 
+![Installability: Bronze](http://img.shields.io/badge/installability-bronze-8c7853.svg)
+
+`http://img.shields.io/badge/installability-bronze-8c7853.svg`
+
 ### Silver
 
 * Bronze standard documentation, plus:
 * Vagrant support: Cloning the repository, `cd` to the directory and `vagrant
   up` will result in a working development instance.
 * There is an internationalization mechanism.
+
+![Installability: Silver](http://img.shields.io/badge/installability-silver-lightgrey.svg)
+
+`http://img.shields.io/badge/installability-silver-lightgrey.svg`
 
 ### Gold
 
@@ -41,6 +49,10 @@ based on its ease of installability.
   and bringing it up to production standard, for example instructions on:
   * Necessary external dependencies.
   * Importing data.
+
+![Installability: Gold](http://img.shields.io/badge/installability-gold-ffd700.svg)
+
+`http://img.shields.io/badge/installability-gold-ffd700.svg`
 
 ## SAAS Code
 
