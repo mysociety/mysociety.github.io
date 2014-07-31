@@ -3,7 +3,7 @@ layout: page
 title: Installation Standards
 ---
 
-This is a draft document. Suggestions for improvements and changes are welcome;
+Suggestions for improvements and changes are welcome;
 just open a pull request with your proposed edits.
 
 ## Redeployable Code
