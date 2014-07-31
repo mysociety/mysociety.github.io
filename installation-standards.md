@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Installation Standards (Draft)
+title: Installation Standards
 ---
 
 This is a draft document. Suggestions for improvements and changes are welcome;
@@ -18,6 +18,10 @@ based on its ease of installability.
   hand-holding, rely on undocumented configuration aspects, require significant
   domain knowledge etc.
 
+![Installability: Lead](http://img.shields.io/badge/installability-lead-6d6a65.svg)
+
+`http://img.shields.io/badge/installability-lead-6d6a65.svg`
+
 ### Bronze
 
 * The software has a fully documented installation process, which can be
@@ -31,9 +35,9 @@ based on its ease of installability.
 ### Silver
 
 * Bronze standard documentation, plus:
-* Vagrant support: Cloning the repository, `cd` to the directory and `vagrant
-  up` will result in a working development instance.
-* There is an internationalization mechanism.
+* A script, Puppet manifest or Chef cookbook (or combination of) which will
+  provision and configure the server, install the code and result in a working
+  (but not configured or fully provisioned) instance of the software.
 
 ![Installability: Silver](http://img.shields.io/badge/installability-silver-lightgrey.svg)
 
@@ -42,13 +46,14 @@ based on its ease of installability.
 ### Gold
 
 * Silver standard features, plus:
-* A script, Puppet manifest or Chef cookbook (or combination of) which will
-  provision and configure the server, install the code and result in a working
-  (but not configured or fully provisioned) instance of the software.
+* Vagrant support: Cloning the repository, `cd` to the directory and `vagrant
+  up` will result in a working development instance.
 * Comprehensive documentation on taking an unprovisioned production instance
   and bringing it up to production standard, for example instructions on:
   * Necessary external dependencies.
   * Importing data.
+* A set of stub or example data which can be loaded to a development or
+  production instance.
 
 ![Installability: Gold](http://img.shields.io/badge/installability-gold-ffd700.svg)
 
