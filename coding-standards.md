@@ -33,6 +33,7 @@ title: Coding Standards
 * [ruby-style-guide](https://github.com/bbatsov/ruby-style-guide)
 * [rubocop](https://github.com/bbatsov/rubocop)
 * [rails-style-guide](https://github.com/bbatsov/rails-style-guide)
+* [rspec-style-guide](http://betterspecs.org)
 
 ### Indentation and whitespace
 
