@@ -131,6 +131,13 @@ aware that there may be project-specific conventions that differ
 from this policy - for example, on Alaveteli only those with the
 label "awaiting review" will be reviewed.)
 
+You should never make a pull request which is intended for
+review unless you've tried the code. It's surprisingly common
+that a reviewer's time is wasted by errors that would easily
+have been found if the author had exercised the code paths that
+are changed in the pull request.  Needless to say, you should
+also make sure that all the automated tests pass as well.
+
 <sup>1</sup> Some people like to do this because they prefer
 GitHub's presentation of pull requests to that of branches not
 associated with a pull request.
