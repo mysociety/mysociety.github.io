@@ -122,6 +122,19 @@ title: Coding Standards
   review is needed.  For more details on code reviews, see the
   next section.
 
+## Making a pull request
+
+If you create a pull request, but don't want it to be reviewed
+yet<sup>1</sup> make sure that you put "WiP" (for "Work in
+Progress") at the start of its subject. (Although please be
+aware that there may be project-specific conventions that differ
+from this policy - for example, on Alaveteli only those with the
+label "awaiting review" will be reviewed.)
+
+<sup>1</sup> Some people like to do this because they prefer
+GitHub's presentation of pull requests to that of branches not
+associated with a pull request.
+
 ## Commit messages
 
 Good commit messages are very important for making our
