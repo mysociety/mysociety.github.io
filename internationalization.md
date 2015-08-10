@@ -21,6 +21,12 @@ start marking up application text for translation:
 
 ## General Guidelines
 
+### Plan for internationalization at the design stage
+
+The W3C has a good article on things to look out for.
+
+[http://www.w3.org/International/articles/article-text-size.en](http://www.w3.org/International/articles/article-text-size.en)
+
 ### Don't concatenate strings to "build" a sentence
 
 Different languages put things in different orders in the sentence. A
