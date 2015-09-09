@@ -21,8 +21,8 @@ You may find the following commands useful:
 
 * `jekyll serve --watch` - Starts a web server on `localhost:4000` with the
   latest compiled copy of the site. Recompiles when files change.
-* `sass --watch` - Monitors static asset folders for changes, and recompiles
-  when necessary.
+* `sass --watch theme/sass:assets/css` - Monitors static asset folders for changes, and recompiles
+  when necessary. add `--style compressed` for production.
 
 ### Workflow
 
