@@ -1,0 +1,207 @@
+@import '../../theme/sass/_variables.scss';
+@import '../../theme/sass/_mixins.scss';
+/* Welcome to design page */
+body {
+    background-color: $colour_background;
+}
+.design-hero {
+    padding: 3em 0 6em;
+    background-image: url("../img/design-hero-bg.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    @media (min-width: 40em) {
+      padding: 6em 0 9em;
+      background-position:center top;
+    }
+    @media (min-width: 80em) {
+      background-position: center -100px;
+    }
+    h1 {
+      font-weight: 600;
+      font-size: 3.5em;
+      @media (min-width: 40em) {
+        font-size: 5.5em;
+      }
+    }
+    .subhead {
+        margin-bottom: 0;
+        font-size: 1.333333333em;
+    }
+}
+
+.page {
+    background-color: #fff;
+    padding: 3em 0;
+    position: relative;
+    top: -4em;
+    @media (min-width: 40em) {
+      padding: 6em 0;
+      top: -8em;
+    }
+    > p {
+        max-width: 38em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.intro-section {
+    padding: 0 0 4em 0;
+    border-bottom: 1px solid $colour_borders;
+    > p {
+        font-size: 1.166666667em;
+        padding: 0 1em 0 1em;
+        @media (min-width: 40em) {
+          padding: 0 5em 0 4em;
+        }
+        @media (min-width: 60em) {
+          padding-right: 15em;
+          padding-left: 8em;
+        }
+    }
+    h1 {
+      font-size: 2em;
+      font-weight: 700;
+      max-width: 14em;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      background: linear-gradient(to right, $colour_green, $colour_blue);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+      @media (min-width: 40em) {
+        padding-left: 1.3em;
+        font-size: 3.5em;
+        padding-right: 0;
+      }
+      @media (min-width: 60em) {
+        padding-left: 2.6em;
+      }
+    }
+}
+
+.body-section {
+  padding: 4em 0 4em 0;
+    > p {
+        font-size: 1.166666667em;
+        padding: 0 1em 0 1em;
+        @media (min-width: 40em) {
+          padding: 0 5em 0 4em;
+        }
+        @media (min-width: 60em) {
+          padding-right: 15em;
+          padding-left: 8em;
+        }
+    }
+}
+
+.big-quote {
+  background: linear-gradient(to right, $colour_green, $colour_blue);
+  padding: 1em 0;
+  color: #fff;
+  @media (min-width: 40em) {
+    padding: 3em 0;
+  }
+  blockquote {
+    font-weight: 700;
+    font-size: 2em;
+    line-height: 1.4em;
+    padding-left: 0.5em;
+    max-width: 20em;
+    @media (min-width: 40em) {
+      padding-left: 3em;
+    }
+  }
+}
+
+.big-quote--people {
+  background-image: url("../img/people.jpg");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2em 0;
+  @media (min-width: 40em) {
+    padding: 5em 0;
+    background-position: center top;
+  }
+}
+
+.pullquote {
+    max-width: 300px;
+    font-size: 1.75em;
+    line-height: 1.25em;
+    font-weight: 700;
+    padding-top: 1.5em;
+    position: relative;
+    @media (min-width: 40em) {
+      float: left;
+    }
+    &:before {
+        content:'';
+        position:absolute;
+        width:100%;
+        height:8px;
+        background:linear-gradient(to right, $colour_green, $colour_blue);
+        top:0;
+        left:0;
+    }
+}
+
+.pullquote--right {
+  @media (min-width: 40em) {
+      float: right;
+    }
+}
+
+.our-process {
+  padding: 4em 0 4em 0;
+  border-bottom: 1px solid $colour_borders;
+  h2 {
+    text-align: center;
+  }
+}
+
+.meet-the-designers {
+  position: relative;
+  margin-right: 1.5em;
+  margin-left: 1.5em;
+  @media (min-width: 40em) {
+    width: 40%;
+    float: right;
+    margin-right: 2em;
+    margin-left: 2em;
+  }
+  h2 {
+    font-size: 0.722222222em;
+    text-transform: uppercase;
+    color: $colour_dark_grey;
+  }
+}
+
+.designer {
+  margin-bottom: 2em;
+  width: 42%;
+  margin-right: 8%;
+  float: left;
+}
+
+.designer__photo {
+
+}
+
+.designer__name {
+  font-size: 0.777777778em;
+  font-weight: normal;
+}
+.two-photos {
+  @include clearfix;
+  width: 100%;
+  clear: both;
+}
+
+.two-photos__photo {
+  width: 50%;
+  float: left;
+  height: 50%;
+}
