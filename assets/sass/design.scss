@@ -67,9 +67,10 @@ body {
       max-width: 14em;
       padding-left: 0.5em;
       padding-right: 0.5em;
-      background: linear-gradient(to right, $colour_green, $colour_blue);
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
+      -webkit-text-fill-color: transparent;
+      background: -webkit-linear-gradient(left, $colour_green, $colour_blue);
+      background: -o-linear-gradient(transparent, transparent);
+      -webkit-background-clip: text;
       @media (min-width: 40em) {
         padding-left: 1.3em;
         font-size: 3.5em;
@@ -97,6 +98,7 @@ body {
 }
 
 .big-quote {
+  background-color: $colour_blue;
   background: linear-gradient(to right, $colour_green, $colour_blue);
   padding: 1em 0;
   color: #fff;
@@ -142,7 +144,8 @@ body {
         position:absolute;
         width:100%;
         height:8px;
-        background:linear-gradient(to right, $colour_green, $colour_blue);
+        background-color: $colour_green;
+        background: linear-gradient(to right, $colour_green, $colour_blue);
         top:0;
         left:0;
     }
