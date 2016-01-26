@@ -24,9 +24,9 @@ Also, make sure to check out the latest version of the `theme` submodule:
 
 ### Compiling
 
-Compile the Sass styles from the theme, with:
+Compile the Sass styles with:
 
-    bundle exec sass --watch theme/sass:assets/css --style compressed
+    bundle exec sass --watch assets/sass:assets/css --style compressed
 
 And run the Jekyll server with:
 
