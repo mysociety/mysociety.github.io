@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>{{ page.title }} | Developer Information | mySociety</title>
     <link rel="stylesheet" href="{{ site.baseurl }}assets/css/global.min.css">
+    {% if page.extra_styles %}{{ page.extra_styles }}{% endif %}
     <meta name="viewport" content="initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,400italic' rel='stylesheet' type='text/css'>
     <!--[if lt IE 9]>
