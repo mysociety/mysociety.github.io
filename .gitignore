@@ -1,4 +1,8 @@
 .DS_Store
+.bundle
+/vendor
 /_site
 /.sass-cache
+/assets/css/global.css
+/assets/css/global.css.map
 *~

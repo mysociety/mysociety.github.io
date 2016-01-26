@@ -3,3 +3,11 @@ pygments: true
 baseurl: /
 encoding: UTF-8
 markdown: kramdown
+host: 0.0.0.0
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Gruntfile.js
+  - README.md
+  - LICENSE.md
+  - vendor

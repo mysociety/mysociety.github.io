@@ -6,23 +6,34 @@ likely to be accepted.
 
 ## This Site
 
+### Installing
+
+This site is mostly compiled by magic – specifically
+[Jekyll](http://jekyllrb.com/) and [Sass](http://sass-lang.com/) which will
+have to be installed before you can do anything.
+
+Unless you have a good reason not to, you will probably want to use Bundler
+to install the ruby dependencies. Just run this from the root directory of
+this repo:
+
+    bundle install --path vendor/bundle
+
+Also, make sure to check out the latest version of the `theme` submodule:
+
+    git submodule update --init
+
 ### Compiling
 
-This site is mostly compiled by magic (specifically
-[Jekyll](http://jekyllrb.com/) and [Sass](http://sass-lang.com/) which will
-have to be installed before you can do anything. The following commands will
-install the necessary software:
+Compile the Sass styles from the theme, with:
 
-* `gem install --no-document --user-install github-pages` for preference, or
-  (if you have an older version of Ruby) `jekyll`
-* `gem install --no-document --user-install sass`
+    bundle exec sass --watch theme/sass:assets/css --style compressed
 
-You may find the following commands useful:
+And run the Jekyll server with:
 
-* `jekyll serve --watch` - Starts a web server on `localhost:4000` with the
-  latest compiled copy of the site. Recompiles when files change.
-* `sass --watch theme/sass:assets/css` - Monitors static asset folders for changes, and recompiles
-  when necessary. add `--style compressed` for production.
+    buyndle exec jekyll serve
+
+The website will be available at `http://localhost:4000` and will recompile
+automatically when files are changed.
 
 ### Workflow
 
