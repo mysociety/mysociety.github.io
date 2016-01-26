@@ -11,3 +11,6 @@ exclude:
   - README.md
   - LICENSE.md
   - vendor
+sass:
+  sass_dir: _sass
+  style: compressed

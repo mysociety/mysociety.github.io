@@ -1,9 +1,10 @@
-@import '../../theme/sass/_variables.scss';
-@import '../../theme/sass/_mixins.scss';
-/* Welcome to design page */
+@import '../theme/sass/_variables.scss';
+@import '../theme/sass/_mixins.scss';
+
 body {
     background-color: $colour_background;
 }
+
 .design-hero {
     padding: 3em 0 6em;
     background-image: url("../img/design-hero-bg.jpg");

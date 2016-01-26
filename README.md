@@ -24,13 +24,9 @@ Also, make sure to check out the latest version of the `theme` submodule:
 
 ### Compiling
 
-Compile the Sass styles with:
+The HTML/Markdown pages and Sass styles are all compiled by Jekyll:
 
-    bundle exec sass --watch assets/sass:assets/css --style compressed
-
-And run the Jekyll server with:
-
-    buyndle exec jekyll serve
+    bundle exec jekyll serve
 
 The website will be available at `http://localhost:4000` and will recompile
 automatically when files are changed.
