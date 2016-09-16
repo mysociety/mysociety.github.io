@@ -263,12 +263,21 @@ email or IRC.
   world we inhabit. They will have older browsers, and less knowledge of using
   computers. Our sites should still work in IE6, though of course functionality
   may differ, we are in no way a "pixel-perfect" house.
-* You can get VMs of IE6-11 from
+* The simplest way to try out a site in a variety of Internet
+  Explorer version is to use
+  [BrowserStack](https://www.browserstack.com/).  It lets you
+  operate many browsers on different operating systems from
+  within your browser, or take screenshots of a single URL on
+  multiple browsers. We have a mySociety account, which you can
+  find the details of on our internal wiki. (Please bear in mind
+  that they allow us to use the service for free in return for
+  attribution, so make sure you add a thank-you to the README of
+  any site that you test using Browserstack.)
+* Alternatively, you can get VMs of IE6-11 from
   [modern.ie](http://www.modern.ie/en-US/virtualization-tools#downloads). On
   Linux/OS X a tool called [ievms](https://github.com/xdissent/ievms) automates
   the installation process - see [these
-  instructions](https://github.com/xdissent/ievms#installation). Or Robin has a
-  browserstack account for quick testing.
+  instructions](https://github.com/xdissent/ievms#installation).
 * For info, IE7 was the oldest version to support position:fixed and
   min/max-width; IE8 was the oldest to support display:table and
   box-sizing:border-box; IE9 was the oldest to support media queries.
