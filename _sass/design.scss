@@ -112,6 +112,9 @@ body {
     line-height: 1.4em;
     padding-left: 0.5em;
     max-width: 20em;
+    color: inherit;
+    border: none;
+    font-style: inherit;
     @media (min-width: 40em) {
       padding-left: 3em;
     }
