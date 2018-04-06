@@ -96,6 +96,13 @@ title: Coding Standards
   tests are for anyone ever working on the project ever in the future; they
   provide security that changes can be made. For a mature project the ideal is
   to have some unit tests and some functional tests for key scenarios.
+* Although using Test Driven Development (writing a failing test
+  before code that makes it pass) is encouraged, the tests and
+  implementation should be in the same commit. Being able to
+  make the assumption that the tests should pass at every commit
+  can be helpful in tracking down where bugs were introduced
+  using `git bisect`. (You can check that the tests pass at each
+  commit with `git rebase -i --exec 'rails test' master`, say.)
 
 ## Committing code and working with repositories
 
