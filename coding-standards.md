@@ -236,6 +236,38 @@ to assess whether it's so urgent that you need to merge it
 regardless.  If you're not clear about this do ask about it by
 email or IRC.
 
+## Improving topic branches by rewriting history
+
+Generally, when you make a pull request based on a topic branch,
+the history of that branch should reflect how you ideally would
+have gone about making that change, rather than reflecting how
+you *actually* got to the end result. You're encouraged to use
+interactive rebase to do this before asking anyone to look at a
+pull request based on that branch.
+
+This means that people who review commit-by-commit aren't
+wasting time by looking through code that'll be backed out later
+(either because it was a dead end, or had fixups applied) and
+the history is more succinct and easier to understand for people
+reading back later.
+
+This might seem almost dishonest—rewriting history to make it
+look like you had perfect insight!—but this isn't how we regard
+it. It's about making sure that the history of the codebase is
+as useful and easy to interrogate as possible.
+
+If knowing about alternative approaches that you didn't use in
+the end might be useful to people in the future (and it often
+is) it's good to mention those in the body of one of your commit
+messages, with an explanation of why you didn't do it that
+way. This is much easier for coders in the future to understand
+than seeing multiple commits that represent a rabbit hole and
+are backed out later.
+
+Of course, this doesn't mean squashing everything into one
+commit; you should still try to make sure that each commit in
+the branch represents a logically coherent and distinct change.
+
 ## Documentation and maintainability
 
 * At a minimum, there should be a list of steps required to install the
