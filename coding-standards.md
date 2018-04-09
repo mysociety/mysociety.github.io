@@ -143,7 +143,8 @@ review unless you've tried the code. It's surprisingly common
 that a reviewer's time is wasted by errors that would easily
 have been found if the author had exercised the code paths that
 are changed in the pull request.  Needless to say, you should
-also make sure that all the automated tests pass as well.
+also make sure that all the automated tests pass as well, as do
+any Github integrations (such as Travis).
 
 <sup>1</sup> Some people like to do this because they prefer
 GitHub's presentation of pull requests to that of branches not
